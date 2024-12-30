@@ -15,6 +15,8 @@ Before starting, make sure you have Docker installed on your machine.
 
 ### 1. Navigate to the `wordpress` directory and build the WordPress Docker image
 
+All Docker Images Rumove in single command docker image prune -a -f
+
 ```bash
 cd wordpress/
 docker build -t burhan503-wordpress .
