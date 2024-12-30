@@ -1,0 +1,21 @@
+docker build -t burhan503-wordpress .
+
+Successfully built 6b07c356a138
+Successfully tagged burhan503-wordpress:latest
+
+
+Successfully built abcbc6f1a433
+Successfully tagged burhan503-mysql:latest
+
+
+docker tag burhan503-wordpress:latest burhan503/burhan503-wordpress:v1.0
+docker tag burhan503-mysql:latest burhan503/burhan503-mysql:v1.0
+
+docker push burhan503/burhan503-wordpress:latest 
+docker push burhan503/burhan503-mysql:latest
+
+
+docker run -d --name mysql_db --network wordpress-network -e MYSQL_ROOT_PASSWORD=wordpress_user_password -e MYSQL_DATABASE=name_your_wordpress_database -e MYSQL_USER=wordpress_user -e MYSQL_PASSWORD=wordpress_user_password burhan503-mysql:latest
+
+
+docker run -d --name wordpress --network wordpress-network -p 8000:80 -e WORDPRESS_DB_HOST=mysql_db:3306 -e WORDPRESS_DB_USER=wordpress_user -e WORDPRESS_DB_PASSWORD=wordpress_user_password -e WORDPRESS_DB_NAME=name_your_wordpress_database burhan503-wordpress:latest
