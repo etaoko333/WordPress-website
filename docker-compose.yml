@@ -1,21 +1,21 @@
+version: '3.8'
 services:
-  #Database service
   mysql_db:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: some_password_of_ur_choice
+      MYSQL_ROOT_PASSWORD: wordpress_user_password
       MYSQL_DATABASE: name_your_wordpress_database
       MYSQL_USER: wordpress_user
       MYSQL_PASSWORD: wordpress_user_password
     volumes:
-      - mysql:/var/lib/mysql
+      - mysql-data:/var/lib/mysql
+    networks:
+      - wordpress-network
 
-  #Wordpress (image based on Apache)
   wordpress:
-    depends_on:
-      - mysql_db
-    image: wordpress:latest
+    build:
+      context: ./wordpress
     restart: always
     ports:
       - "8000:80"
@@ -25,7 +25,15 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress_user_password
       WORDPRESS_DB_NAME: name_your_wordpress_database
     volumes:
-      ["./:/var/www/html"]
+      - ./:/var/www/html
+    depends_on:
+      - mysql_db
+    networks:
+      - wordpress-network
 
 volumes:
-  mysql: {}
+  mysql-data:
+
+networks:
+  wordpress-network:
+
