@@ -113,4 +113,4 @@ By following the above steps, you will have successfully built, tagged, pushed, 
 
 This `README.md` includes every command you ran, organized into sections for clarity. Let me know if you'd like to add more details!
 
-## **Now Just on Kubernetes Here i Follow Some step with Complete Details How to install Kuber in OS & How to Apply all Manifest files **
+## Now Jump on Kubernetes Here i follow some step to install Kubernetes step by step
