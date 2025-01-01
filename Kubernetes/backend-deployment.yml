@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: e-website-mysql-deployment
+  namespace: e-website
+  labels:
+    app: e-website-mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: e-website-mysql
+  template:
+    metadata:
+      labels:
+        app: e-website-mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "some_password_of_ur_choice"
+        - name: MYSQL_DATABASE
+          value: "name_your_wordpress_database"
+        - name: MYSQL_USER
+          value: "wordpress_user"
+        - name: MYSQL_PASSWORD
+          value: "wordpress_user_password"
