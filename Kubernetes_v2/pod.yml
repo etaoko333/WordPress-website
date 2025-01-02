@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ecommerce-pod
+  namespace: ecommerce-pod  # Corrected "Namespace" to lowercase "namespace"
+  labels:
+    name: ecommerce-pod
+spec:
+  containers:
+  - name: ecommerce-pod
+    image: burhan503/burhan503-wordpress:v1.0
+    ports:
+      - containerPort: 80
