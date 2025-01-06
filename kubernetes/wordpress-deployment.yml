@@ -27,3 +27,23 @@ spec:
           value: "wordpress"
         - name: WORDPRESS_DB_NAME
           value: "wordpress"
+        volumeMounts:
+        - name: wordpress-persistent-storage
+          mountPath: /var/www/html/wp-content  # Mount to wp-content for persistence
+      volumes:
+      - name: wordpress-persistent-storage
+        persistentVolumeClaim:
+          claimName: wordpress-pvc  # The PVC for WordPress data
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wordpress-pvc
+  namespace: wordpress-namespace
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
