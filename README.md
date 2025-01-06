@@ -284,12 +284,12 @@ kubectl port-forward svc/wordpress 8080:80 -n wordpress-namespace
 
 You can change the port if needed:
 ```bash
-kubectl port-forward svc/wordpress 8100:80 -n wordpress-namespace
+kubectl port-forward svc/wordpress 8080:8100 -n wordpress-namespace
 ```
 
 #### Access MySQL:
 ```bash
-kubectl port-forward svc/mysql 3307:3306 -n wordpress-namespace
+kubectl port-forward svc/mysql 3306:3306 -n wordpress-namespace
 ```
 
 ### 7. Cleanup
