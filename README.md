@@ -189,7 +189,7 @@ kubectl cluster-info
 ### **Steps:**
 1. Create a namespace:
 ```bash
-kubectl create ns website
+kubectl create ns wordpress-namespace
 ```
 
 2. Verify the namespace:
@@ -199,7 +199,7 @@ kubectl get ns
 
 3. Delete the namespace:
 ```bash
-kubectl delete ns website
+kubectl delete ns wordpress-namespace
 ```
 
 ---
@@ -227,7 +227,7 @@ Navigate to the directory where your `config.yml` file is located and create a `
 
 ```bash
 cd kind/
-kind create cluster --name=website --config=config.yml
+kind create cluster --name=wordpress-namespace --config=config.yml
 ```
 
 ### 2. Check the Created Clusters
@@ -246,7 +246,7 @@ Next, apply the Kubernetes manifests to set up your WordPress and MySQL resource
 cd kubernetes/
 
 # Apply the namespace
-kubectl apply -f namespace.yml
+kubectl apply -f namespace.yml -n wordpress-namespace
 
 # Apply the MySQL deployment and service
 kubectl apply -f mysql-deployment.yml -n wordpress-namespace
