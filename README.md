@@ -173,7 +173,7 @@ nodes:
 
 2. Create the cluster using the configuration file:
 ```bash
-kind create cluster --name=e-commerce-webiste --config=config.yml
+kind create cluster --name=wordpress-namespace --config=config.yml
 ```
 
 3. Verify the cluster:
