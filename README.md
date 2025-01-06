@@ -312,24 +312,16 @@ kind delete cluster --name=website
 - If the `kind create cluster` command fails, ensure that Docker is running properly on your machine.
 - If `kubectl get pods` shows that the pods are not running, check the logs of the respective pods using:
 ## WordPress Error : 
-- If you getting limit file error when you are upload a custome template the you can use this code on .htaccess file
-  `
-# .htaccess to increase upload file size and PHP limits
 
+# .htaccess to increase upload file size and PHP limits
+```bash
 php_value upload_max_filesize 100M
 php_value post_max_size 100M
 php_value memory_limit 256M
 php_value max_execution_time 300
-
-  `
+```
+- Kubectl Logs 
   ```bash
   kubectl logs <pod-name> -n wordpress-namespace
   ```
-
-For further details on `kind`, refer to the [official documentation](https://kind.sigs.k8s.io/).
-```
-
-This `README.md` outlines all the necessary steps, commands, and explanations based on the sequence of commands you provided. You can further customize it based on your specific environment or setup.
-
-By following these steps, you will have successfully installed KIND and kubectl, set up a Kubernetes cluster, and learned how to manage namespaces. Enjoy building your Kubernetes environments!
 
