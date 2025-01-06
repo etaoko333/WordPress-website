@@ -249,12 +249,12 @@ cd kubernetes/
 kubectl apply -f namespace.yml
 
 # Apply the MySQL deployment and service
-kubectl apply -f mysql-deployment.yml
-kubectl apply -f mysql-service.yml
+kubectl apply -f mysql-deployment.yml -n wordpress-namespace
+kubectl apply -f mysql-service.yml -n wordpress-namespace
 
 # Apply the WordPress deployment and service
-kubectl apply -f wordpress-deployment.yml
-kubectl apply -f wordpress-service.yml
+kubectl apply -f wordpress-deployment.yml -n wordpress-namespace
+kubectl apply -f wordpress-service.yml -n wordpress-namespace
 ```
 
 ### 4. Check Resources in the Namespace
@@ -322,3 +322,4 @@ For further details on `kind`, refer to the [official documentation](https://kin
 This `README.md` outlines all the necessary steps, commands, and explanations based on the sequence of commands you provided. You can further customize it based on your specific environment or setup.
 
 By following these steps, you will have successfully installed KIND and kubectl, set up a Kubernetes cluster, and learned how to manage namespaces. Enjoy building your Kubernetes environments!
+
