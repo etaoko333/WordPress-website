@@ -279,14 +279,8 @@ To access the WordPress and MySQL services locally, use the following port-forwa
 
 #### Access WordPress:
 ```bash
-kubectl port-forward svc/wordpress 8080:80 -n wordpress-namespace
-```
-
-You can change the port if needed:
-```bash
 kubectl port-forward svc/wordpress 8080:8100 -n wordpress-namespace
 ```
-
 #### Access MySQL:
 ```bash
 kubectl port-forward svc/mysql 3306:3306 -n wordpress-namespace
@@ -297,7 +291,7 @@ kubectl port-forward svc/mysql 3306:3306 -n wordpress-namespace
 To delete the cluster after use, you can run:
 
 ```bash
-kind delete cluster --name=website
+kind delete cluster --name=wordpress-namespace
 ```
 
 ---
