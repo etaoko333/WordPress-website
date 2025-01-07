@@ -6,7 +6,7 @@ metadata:
 spec:
   ports:
   - port: 8100
-    targetPort: 80
+    targetPort: 8100
   selector:
     app: wordpress
   type: NodePort
