@@ -173,7 +173,7 @@ nodes:
 
 2. Create the cluster using the configuration file:
 ```bash
-kind create cluster --name=e-commerce-webiste --config=config.yml
+kind create cluster --name=wordpress-namespace --config=config.yml
 ```
 
 3. Verify the cluster:
@@ -189,7 +189,7 @@ kubectl cluster-info
 ### **Steps:**
 1. Create a namespace:
 ```bash
-kubectl create ns website
+kubectl create ns wordpress-namespace
 ```
 
 2. Verify the namespace:
@@ -199,7 +199,7 @@ kubectl get ns
 
 3. Delete the namespace:
 ```bash
-kubectl delete ns website
+kubectl delete ns wordpress-namespace
 ```
 
 ---
@@ -227,7 +227,7 @@ Navigate to the directory where your `config.yml` file is located and create a `
 
 ```bash
 cd kind/
-kind create cluster --name=website --config=config.yml
+kind create cluster --name=wordpress-namespace --config=config.yml
 ```
 
 ### 2. Check the Created Clusters
@@ -246,15 +246,15 @@ Next, apply the Kubernetes manifests to set up your WordPress and MySQL resource
 cd kubernetes/
 
 # Apply the namespace
-kubectl apply -f namespace.yml
+kubectl apply -f namespace.yml -n wordpress-namespace
 
 # Apply the MySQL deployment and service
-kubectl apply -f mysql-deployment.yml
-kubectl apply -f mysql-service.yml
+kubectl apply -f mysql-deployment.yml -n wordpress-namespace
+kubectl apply -f mysql-service.yml -n wordpress-namespace
 
 # Apply the WordPress deployment and service
-kubectl apply -f wordpress-deployment.yml
-kubectl apply -f wordpress-service.yml
+kubectl apply -f wordpress-deployment.yml -n wordpress-namespace
+kubectl apply -f wordpress-service.yml -n wordpress-namespace
 ```
 
 ### 4. Check Resources in the Namespace
@@ -279,17 +279,11 @@ To access the WordPress and MySQL services locally, use the following port-forwa
 
 #### Access WordPress:
 ```bash
-kubectl port-forward svc/wordpress 8080:80 -n wordpress-namespace
+kubectl port-forward svc/wordpress 8080:8100 -n wordpress-namespace
 ```
-
-You can change the port if needed:
-```bash
-kubectl port-forward svc/wordpress 8100:80 -n wordpress-namespace
-```
-
 #### Access MySQL:
 ```bash
-kubectl port-forward svc/mysql 3307:3306 -n wordpress-namespace
+kubectl port-forward svc/mysql 3306:3306 -n wordpress-namespace
 ```
 
 ### 7. Cleanup
@@ -297,7 +291,7 @@ kubectl port-forward svc/mysql 3307:3306 -n wordpress-namespace
 To delete the cluster after use, you can run:
 
 ```bash
-kind delete cluster --name=website
+kind delete cluster --name=wordpress-namespace
 ```
 
 ---
@@ -311,14 +305,17 @@ kind delete cluster --name=website
 
 - If the `kind create cluster` command fails, ensure that Docker is running properly on your machine.
 - If `kubectl get pods` shows that the pods are not running, check the logs of the respective pods using:
+## WordPress Error : 
 
+# .htaccess to increase upload file size and PHP limits
+```bash
+php_value upload_max_filesize 100M
+php_value post_max_size 100M
+php_value memory_limit 256M
+php_value max_execution_time 300
+```
+- Kubectl Logs 
   ```bash
   kubectl logs <pod-name> -n wordpress-namespace
   ```
 
-For further details on `kind`, refer to the [official documentation](https://kind.sigs.k8s.io/).
-```
-
-This `README.md` outlines all the necessary steps, commands, and explanations based on the sequence of commands you provided. You can further customize it based on your specific environment or setup.
-
-By following these steps, you will have successfully installed KIND and kubectl, set up a Kubernetes cluster, and learned how to manage namespaces. Enjoy building your Kubernetes environments!

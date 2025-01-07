@@ -46,4 +46,8 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
+<<<<<<< HEAD
       storage: 1Gi
+=======
+      storage: 1Gi
+>>>>>>> 41884fed58cd484fdd096e23f7922e731b998608
