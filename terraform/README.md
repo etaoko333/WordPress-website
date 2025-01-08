@@ -50,3 +50,7 @@
 
   - # terrafrom Destroy 
   - Destroy complete! Resources: 4 destroyed.
+  - ![image](https://github.com/user-attachments/assets/91d1de81-9753-4daa-b815-2d15c25f96f3)
+  - ![image](https://github.com/user-attachments/assets/8bb966b4-a2ce-4a00-96a1-694c758ddd57)
+
+
