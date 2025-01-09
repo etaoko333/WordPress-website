@@ -48,6 +48,8 @@ kubectl get pv -n wordpress-namespace
 kubectl apply -f persistentVolumeClaim.yml
 kubectl get pv -n wordpress-namespace
 
+#Delete PV if getting any error 
+kubectl delete pvc mysql-pvc -n wordpress-namespace
 # Apply the namespace
 kubectl apply -f namespace.yml
 
