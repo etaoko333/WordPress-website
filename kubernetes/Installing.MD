@@ -38,7 +38,10 @@ Next, apply the Kubernetes manifests to set up your WordPress and MySQL resource
 
 ```bash
 cd kubernetes/
-
+# PersistentVolume 
+kubectl apply -f persistentVolume.yml
+kubectl get ns
+kubectl get pv -n wordpress-namespace
 # Apply the namespace
 kubectl apply -f namespace.yml
 
