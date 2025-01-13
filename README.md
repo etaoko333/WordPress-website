@@ -106,3 +106,7 @@ docker build -t burhan503-mysql .
 ```bash
 docker images
 ```
+### If you have previously deployed any application through Docker, the Docker images remain stored. To remove them, use this command.
+```bash
+docker image prune -a -f
+```
