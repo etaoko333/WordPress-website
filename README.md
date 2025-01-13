@@ -204,7 +204,7 @@ rm -rf kind
 
 echo "Available on Github Burhan1009 kind & kubectl installation complete."
 ```
-## 22. Setting Up the KIND Cluster**
+## 22. Setting Up the KIND Cluster
 Directory : kind-cluster
 Create a configuration file named `kind-cluster-config.yaml` with the following content:
 
