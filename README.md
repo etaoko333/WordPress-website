@@ -7,7 +7,7 @@ This project contains the setup to run WordPress with MySQL using Docker. Below 
 If you are new to this repository then fork this repository and also like it so that I know you liked my work.
 
 ## 2 Prerequisites
-Before starting, make sure you have Docker & kind installed on your machine. 
+Before starting, make sure you have Docker, Terraform, AWS CLI & Kind installed on your machine. 
 
 ## 3 Docker Install Commands
 ```bash
