@@ -91,3 +91,18 @@ kind --version
 aws --version
 terraform --version
 ```
+## Docker Installing Steps 
+### 10. Navigate to the `wordpress` directory and build the WordPress Docker image
+```bash
+cd wordpress/
+docker build -t burhan503-wordpress .
+```
+### 11. Navigate to the MySQL directory and build the MySQL Docker image
+```bash
+cd ../mysql/
+docker build -t burhan503-mysql .
+```
+### 12 . View the Docker images
+```bash
+docker images
+```
