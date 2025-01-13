@@ -225,3 +225,11 @@ nodes:
 ```yaml
  kind create cluster --name=wordpress-namespace --config=config.yml
 ```
+##  23 Verify the cluster:
+```bash
+kubectl get nodes
+kubectl cluster-info
+```
+- [Docker](https://www.docker.com/get-started)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [kind](https://kind.sigs.k8s.io/docs/user/quick-start/)
