@@ -230,9 +230,32 @@ nodes:
 kubectl get nodes
 kubectl cluster-info
 ```
-## Ensure that you have the following tools installed:
+## 24 Ensure that you have the following tools installed:
 ```yaml
 - [Docker](https://www.docker.com/get-started)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - [kind](https://kind.sigs.k8s.io/docs/user/quick-start/)
+```
+## 25 To verify that the cluster has been created successfully, run:
+```bash
+kind get clusters
+```
+## 26 Apply Kubernetes Configurations This is Kubernetes file structure 
+```yaml
+k8s-manifests/
+├── wordpress/
+│   ├── wordpress-deployment.yaml
+│   ├── wordpress-service.yaml
+│   ├── wordpress-hpa.yaml
+│   ├── wordpress-pv.yaml
+│   ├── wordpress-pvc.yaml
+│   ├── wordpress-configmap.yaml
+│   ├── wordpress-ingress.yaml
+├── mysql/
+│   ├── mysql-deployment.yaml
+│   ├── mysql-service.yaml
+│   ├── mysql-pv.yaml
+│   ├── mysql-pvc.yaml
+│   ├── mysql-configmap.yaml
+│   ├── mysql-secret.yaml
 ```
