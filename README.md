@@ -259,3 +259,12 @@ k8s-manifests/
 │   ├── mysql-configmap.yaml
 │   ├── mysql-secret.yaml
 ```
+## 27 Next, apply the Kubernetes manifests to set up your WordPress and MySQL resources.
+#### 1 Apply Namespace.yml file - cd k8s-manifests/Mysql
+```yaml
+kubectl apply -f namespace.yml 
+```
+#### 2 Apply Namespace.yml file - cd k8s-manifests/Mysql
+```yaml
+kubectl apply -f namespace.yml 
+```
