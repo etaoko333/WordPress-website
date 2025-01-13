@@ -9,58 +9,13 @@ If you are new to this repository then fork this repository and also like it so 
 ## 2 Prerequisites
 Before starting, make sure you have Docker, Terraform, AWS CLI & Kind installed on your machine. 
 
-## 3 Docker Install Commands
+## 3 Configure Terraform & AWS CLI : 
+Reference Install Terraform Official Website 
 ```bash
-sudo apt-get update -y 
-sudo apt-get upgrade -y
-sudo apt-get install docker.io
-sudo apt-get install docker-compose-v2 -y
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 ```
-Add User in Docker Group
+Reference Install Terraform | AWS CLI Youtube
 ```bash
-sudo usermod -aG docker $USER
-newgrp docker
-sudo systemctl start docker
-sudo systemctl status docker
-sudo systemctl enable docker
-```
-## 4 Installing KIND and kubectl
-Create a shell script file named kind_cluster.sh and paste the following commands into it 
-```bash
-#!/bin/bash
-
-[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
-
-chmod +x ./kind
-sudo cp ./kind /usr/local/bin/kind
-
-VERSION="v1.30.0"
-URL="https://dl.k8s.io/release/${VERSION}/bin/linux/amd64/kubectl"
-INSTALL_DIR="/usr/local/bin"
-
-curl -LO "$URL"
-chmod +x kubectl
-sudo mv kubectl $INSTALL_DIR/
-kubectl version --client
-
-rm -f kubectl
-rm -rf kind
-
-echo "Available on Github Burhan1009 kind & kubectl installation complete."
-```
-Give the file Permission 
-```bash
- sudo chmod 777 kind_cluster.sh
-```
-then install 
-```bash
- ./kind_cluster.sh
-```
-## 5 Check Version's 
-
-```bash
-docker --version
-kind --version
-aws --version
-terraform --version
+https://www.youtube.com/watch?v=sNxDvxRk56s
 ```
