@@ -26,8 +26,13 @@ Reference Create AWS IAM User Access Key & Secret Key
 https://youtu.be/03x9PPkXLN0?si=ojN3YT9HXmynBDgW
 ```
 
-## 3 Create IAM user & Accees Key & Secret Key  : 
+## 4 Create IAM user & Accees Key & Secret Key  : 
 Reference Create AWS IAM User Access Key & Secret Key 
 ```bash
 https://youtu.be/SoBlB2K2ULk?si=oNJaPToOsmg2HFvp
+```
+
+## 4 Create EC2 Instance using Terraform  : 
+```bash
+
 ```
