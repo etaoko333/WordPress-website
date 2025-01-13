@@ -56,3 +56,9 @@ then install
 ```bash
  ./kind_cluster.sh
 ```
+## 5 Check Version's 
+
+```bash
+docker --version
+kind --version
+```
