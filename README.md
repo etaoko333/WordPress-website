@@ -222,3 +222,6 @@ nodes:
 
 ```
 -  cd kind-cluster/ 
+```yaml
+ kind create cluster --name=wordpress-namespace --config=config.yml
+```
