@@ -48,3 +48,11 @@ rm -rf kind
 
 echo "Available on Github Burhan1009 kind & kubectl installation complete."
 ```
+Give the file Permission 
+```bash
+ sudo chmod 777 kind_cluster.sh
+```
+then install 
+```bash
+ ./kind_cluster.sh
+```
