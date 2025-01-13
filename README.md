@@ -259,12 +259,33 @@ k8s-manifests/
 │   ├── mysql-configmap.yaml
 │   ├── mysql-secret.yaml
 ```
-## 27 Next, apply the Kubernetes manifests to set up your WordPress and MySQL resources.
+## 27 Next, apply the Kubernetes manifests to set up your WordPress and MySQL resources Recommended Sequence for Deployment.
 #### 1 Apply Namespace.yml file - cd k8s-manifests/Mysql
 ```yaml
 kubectl apply -f namespace.yml 
 ```
-#### 2 Apply Namespace.yml file - cd k8s-manifests/Mysql
+#### Verify Namespace 
 ```yaml
-kubectl apply -f namespace.yml 
+kubectl get namespaces
+```
+#### 2 MySQL Resources Create Persistent Volume.
+```yaml
+kubectl apply -f mysql-pv.yaml
+```
+#### Verify Persistent Volume.
+```yaml
+kubectl get pv
+```
+#### 2 MySQL Resources Create Persistent Volume Claim.
+```yaml
+kubectl apply -f mysql-pvc.yaml
+```
+#### Verify Persistent Volume.
+```yaml
+kubectl get pvc
+```
+For detailed information about a specific PV
+```yaml
+kubectl describe pv -n wordpress-namespace
+kubectl describe pvc my-claim -n wordpress-namespace
 ```
