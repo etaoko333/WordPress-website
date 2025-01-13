@@ -111,7 +111,7 @@ docker images
 ```bash
 docker image prune -a -f
 ```
-### This guide walks you through building, tagging, pushing, and running WordPress and MySQL containers using Docker.
+### 13 This guide walks you through building, tagging, pushing, and running WordPress and MySQL containers using Docker.
 ```bash
 cd wordpress/
 docker build -t burhan503-wordpress .
@@ -119,4 +119,12 @@ docker build -t burhan503-wordpress .
 ```bash
 cd ../mysql/
 docker build -t burhan503-mysql .
+```
+
+### 14. Tag Docker images for versioning 
+After building the images, tag them for versioning:
+```bash
+docker login -u burhan503
+docker tag burhan503-wordpress:latest burhan503/burhan503-wordpress:v1.0
+docker tag burhan503-mysql:latest burhan503/burhan503-mysql:v1.0
 ```
