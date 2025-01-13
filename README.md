@@ -61,4 +61,6 @@ then install
 ```bash
 docker --version
 kind --version
+aws --version
+terraform --version
 ```
