@@ -177,3 +177,30 @@ To remove the stopped containers:
 ```bash
 docker rm wordpress mysql_db
 ```
+# Setting Up KIND and Kubernetes Cluster
+## **1. Installing KIND and kubectl**
+
+1. Create a shell script file named `kind_cluster.sh` and paste the following commands into it:
+
+```bash
+#!/bin/bash
+
+[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
+
+chmod +x ./kind
+sudo cp ./kind /usr/local/bin/kind
+
+VERSION="v1.30.0"
+URL="https://dl.k8s.io/release/${VERSION}/bin/linux/amd64/kubectl"
+INSTALL_DIR="/usr/local/bin"
+
+curl -LO "$URL"
+chmod +x kubectl
+sudo mv kubectl $INSTALL_DIR/
+kubectl version --client
+
+rm -f kubectl
+rm -rf kind
+
+echo "Available on Github Burhan1009 kind & kubectl installation complete."
+```
