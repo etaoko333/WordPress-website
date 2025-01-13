@@ -230,6 +230,9 @@ nodes:
 kubectl get nodes
 kubectl cluster-info
 ```
+## Ensure that you have the following tools installed:
+```yaml
 - [Docker](https://www.docker.com/get-started)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - [kind](https://kind.sigs.k8s.io/docs/user/quick-start/)
+```
