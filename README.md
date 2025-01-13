@@ -19,3 +19,15 @@ Reference Install Terraform | AWS CLI Youtube
 ```bash
 https://www.youtube.com/watch?v=sNxDvxRk56s
 ```
+
+## 3 Create AWS Group & Policy : 
+Reference Create AWS IAM User Access Key & Secret Key 
+```bash
+https://youtu.be/03x9PPkXLN0?si=ojN3YT9HXmynBDgW
+```
+
+## 3 Create IAM user & Accees Key & Secret Key  : 
+Reference Create AWS IAM User Access Key & Secret Key 
+```bash
+https://youtu.be/SoBlB2K2ULk?si=oNJaPToOsmg2HFvp
+```
