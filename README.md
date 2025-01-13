@@ -128,3 +128,52 @@ docker login -u burhan503
 docker tag burhan503-wordpress:latest burhan503/burhan503-wordpress:v1.0
 docker tag burhan503-mysql:latest burhan503/burhan503-mysql:v1.0
 ```
+### 15. Create a custom Docker network
+To allow WordPress and MySQL containers to communicate, create a custom Docker network:
+```bash
+docker network create wordpress-network
+```
+
+### 16. Run the MySQL container
+Run the MySQL container with the necessary environment variables:
+```bash
+docker run -d --name mysql_db --network wordpress-network \
+  -e MYSQL_ROOT_PASSWORD=wordpress_user_password \
+  -e MYSQL_DATABASE=name_your_wordpress_database \
+  -e MYSQL_USER=wordpress_user \
+  -e MYSQL_PASSWORD=wordpress_user_password \
+  burhan503-mysql:latest
+```
+
+### 17. Run the WordPress container 
+Run the WordPress container and link it to the MySQL container:
+```bash
+docker run -d --name wordpress --network wordpress-network -p 8000:80 \
+  -e WORDPRESS_DB_HOST=mysql_db:3306 \
+  -e WORDPRESS_DB_USER=wordpress_user \
+  -e WORDPRESS_DB_PASSWORD=wordpress_user_password \
+  -e WORDPRESS_DB_NAME=name_your_wordpress_database \
+  burhan503-wordpress:latest
+```
+
+### 18. View running containers
+Check that both the WordPress and MySQL containers are running:
+```bash
+docker ps
+```
+
+### 19. Access the WordPress application
+Your WordPress application should now be accessible at:
+```
+http://localhost:8000
+```
+
+### 20. Stop and remove containers
+To stop the running containers:
+```bash
+docker stop wordpress mysql_db
+```
+To remove the stopped containers:
+```bash
+docker rm wordpress mysql_db
+```
