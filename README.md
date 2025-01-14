@@ -405,58 +405,8 @@ Deploy ArgoCD in your Kubernetes cluster using the following command:
 ```bash
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl get pods -n argocd
 ```
+### **2. ArgoCLI  **
 
-### **2. Connect to Git Repository**
-Point ArgoCD to the Git repository containing your Kubernetes manifests. This can be done via the ArgoCD UI or CLI.
 
-### **3. Define Applications**
-Use ArgoCD to map Git directories to Kubernetes applications and namespaces. Specify:
-- Application name
-- Git repository URL
-- Path to Kubernetes manifests
-- Target cluster and namespace
-
-### **4. Sync Applications**
-Deploy and update applications in your Kubernetes cluster based on changes in the Git repository. You can choose manual or automatic sync policies.
-
-### **5. Monitor and Manage**
-Use the ArgoCD UI or CLI to:
-- Monitor application status and health
-- Manually sync or rollback changes
-- Visualize resource hierarchy and dependencies
-
----
-
-## **Key Features**
-- **Declarative GitOps**: Manage Kubernetes resources as code.
-- **Web UI and CLI**: Easy to use for visual monitoring and automation.
-- **Multi-Cluster Support**: Manage multiple Kubernetes clusters from a single ArgoCD instance.
-- **Secure Access**: Supports RBAC and SSO for secure access.
-
----
-
-## **Accessing the ArgoCD Dashboard**
-
-1. **Expose ArgoCD Server**
-   ```bash
-   kubectl port-forward svc/argocd-server -n argocd 8080:443
-   ```
-   Access the dashboard at: [https://localhost:8080](https://localhost:8080)
-
-2. **Login Credentials**
-   - **Username**: `admin`
-   - **Password**: Retrieve the password using:
-     ```bash
-     kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
-     ```
-
----
-
-## **Rollback and Version Control**
-ArgoCD supports version control and rollback by leveraging Git as the source of truth. Simply revert changes in the Git repository to rollback to a previous state.
-
----
-
-## **Learn More**
-For detailed documentation, visit the [ArgoCD Official Documentation](https://argo-cd.readthedocs.io/).
