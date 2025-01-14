@@ -1,3 +1,5 @@
+![1](https://github.com/user-attachments/assets/402e161f-c40f-4f48-99cb-20f082bbae94)
+
 # WordPress and MySQL Docker Setup
 
 This project contains the setup to run WordPress with MySQL using Docker. Below are the detailed steps to build, tag, push, and run the containers for both WordPress and MySQL.
