@@ -307,3 +307,4 @@ kubectl apply -f mysql/mysql-deployment.yaml
 ```yaml
 kubectl apply -f mysql/mysql-service.yaml
 ```
+## WORDPRESS Files 
