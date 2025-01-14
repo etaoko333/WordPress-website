@@ -307,4 +307,41 @@ kubectl apply -f mysql/mysql-deployment.yaml
 ```yaml
 kubectl apply -f mysql/mysql-service.yaml
 ```
-## WORDPRESS Files 
+## WordPress Resources
+#### 8 Persistent Volume create .
+```yaml
+kubectl apply -f wordpress/wordpress-pv.yaml
+```
+
+#### 9 Persistent Volume Claim .
+```yaml
+kubectl apply -f wordpress/wordpress-pvc.yaml
+```
+
+#### 10 WordPress-specific environment variables .
+```yaml
+kubectl apply -f wordpress/wordpress-pv.yaml
+```
+
+#### 11 Persistent Volume create .
+```yaml
+kubectl apply -f wordpress/wordpress-configmap.yaml
+```
+
+#### 12 WordPress deployment create .
+```yaml
+kubectl apply -f wordpress/wordpress-deployment.yaml
+```
+
+#### 13 WordPress service expose .
+```yaml
+kubectl apply -f wordpress/wordpress-service.yaml
+```
+#### 14 Autoscaling configure .
+```yaml
+kubectl apply -f wordpress/wordpress-hpa.yaml
+```
+#### 15 External traffic route .
+```yaml
+kubectl apply -f wordpress/wordpress-ingress.yaml
+```
