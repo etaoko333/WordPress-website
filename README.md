@@ -418,4 +418,15 @@ curl --silent --location -o /usr/local/bin/argocd https://github.com/argoproj/ar
 chmod +x /usr/local/bin/argocd
 argocd version
 ```
-
+### Verify the NodePort Service
+```bash
+kubectl get pods -n argocd
+```
+### Change ArgoCD Server Service Type to NodePort
+```bash
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
+```
+- Verify the NodePort Service
+```bash
+kubectl get svc -n argocd
+```
