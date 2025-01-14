@@ -374,7 +374,7 @@ php_value post_max_size 100M
 php_value memory_limit 256M
 php_value max_execution_time 300
 ```
-## .htaccess to increase upload file size and PHP limits
+## check all services running on single command 
 ```yaml
 Kubectl get all -n wordpress-namespace 
 ```
