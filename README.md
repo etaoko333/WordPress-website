@@ -366,4 +366,11 @@ kubectl port-forward svc/wordpress-svc 8080:80 -n wordpress-namespace --address=
 
 - If the `kind create cluster` command fails, ensure that Docker is running properly on your machine.
 - If `kubectl get pods` shows that the pods are not running, check the logs of the respective pods using:
-  
+
+## .htaccess to increase upload file size and PHP limits
+```yaml
+php_value upload_max_filesize 100M
+php_value post_max_size 100M
+php_value memory_limit 256M
+php_value max_execution_time 300
+```
