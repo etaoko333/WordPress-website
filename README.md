@@ -278,7 +278,7 @@ kubectl apply -f mysql-pv.yaml
 ```yaml
 kubectl get pv
 ```
-#### 2 MySQL Resources Create Persistent Volume Claim.
+#### 3 MySQL Resources Create Persistent Volume Claim.
 ```yaml
 kubectl apply -f mysql-pvc.yaml
 ```
@@ -290,4 +290,20 @@ For detailed information about a specific PV
 ```yaml
 kubectl describe pv -n wordpress-namespace
 kubectl describe pvc my-claim -n wordpress-namespace
+```
+#### 4 Secrets (e.g., database username/password) .
+```yaml
+kubectl apply -f mysql/mysql-secret.yaml
+```
+#### 5 Configuration values (e.g., database settings) .
+```yaml
+kubectl apply -f mysql/mysql-configmap.yaml
+```
+#### 6 MySQL deployment .
+```yaml
+kubectl apply -f mysql/mysql-deployment.yaml
+```
+#### 7 MySQL service expose .
+```yaml
+kubectl apply -f mysql/mysql-service.yaml
 ```
