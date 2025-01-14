@@ -345,3 +345,25 @@ kubectl apply -f wordpress/wordpress-hpa.yaml
 ```yaml
 kubectl apply -f wordpress/wordpress-ingress.yaml
 ```
+#### 15 Port Forwading for MySql Local System  .
+```yaml
+kubectl port-forward svc/mysql-svc 3306:3306 -n wordpress-namespace
+```
+#### 16 Port Forwading for MySql AWS  .
+```yaml
+kubectl port-forward svc/mysql-svc 3306:3306 -n wordpress-namespace --address="0.0.0.0/0"
+```
+#### 17 Port Forwading for WordPress Local System  .
+```yaml
+kubectl port-forward svc/wordpress-svc 8080:80 -n wordpress-namespace
+```
+
+#### 17 Port Forwading for WordPress AWS  .
+```yaml
+kubectl port-forward svc/wordpress-svc 8080:80 -n wordpress-namespace --address="0.0.0.0/0"
+```
+## Troubleshooting
+
+- If the `kind create cluster` command fails, ensure that Docker is running properly on your machine.
+- If `kubectl get pods` shows that the pods are not running, check the logs of the respective pods using:
+  
