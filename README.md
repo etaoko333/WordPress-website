@@ -550,4 +550,16 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
 sudo apt-get update
 sudo apt-get install jenkins
 ```
-
+## Check Jenkins Status 
+```bash
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+```
+## Open your browser and navigate to
+```bash
+http://<your-server-ip>:8080
+```
+## Retrieve the initial admin password:
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
