@@ -432,7 +432,7 @@ kubectl get svc -n argocd
 ```bash
 kubectl port-forward service/argocd-server -n argocd 8100:443 &
 ```
-### **Login to ArgoCD Using CLI*
+## Login to ArgoCD Using CLI
 - username : admin
 - password
 ```bash
