@@ -495,3 +495,15 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 ![image](https://github.com/user-attachments/assets/f2e28910-8cf3-474c-9c64-dca07b9a24e2)
 
 # Jenkins Installing Step's
+- Jenkins is an open-source automation server widely used for continuous integration (CI) and continuous delivery (CD). It automates repetitive tasks involved in the software development lifecycle, such as building, testing, and deploying applications. Jenkins is highly extensible and supports numerous plugins for integrating with various tools, repositories, and environments.
+
+## Why Use Jenkins in Your WordPress Project? 
+- For your WordPress project hosted on GitHub, Jenkins can play a vital role in automating the build, test, and deployment workflows. Here's how Jenkins can be used in your project
+## 1. Continuous Integration (CI)
+- Automate Code Testing: Jenkins can run unit tests or code linting tools whenever a developer pushes changes to the GitHub repository. This ensures code quality and prevents bugs from being introduced into the main branch.
+- GitHub Integration: Jenkins can monitor the GitHub repository for changes (using webhooks or periodic polling). Whenever a new commit is pushed, Jenkins can automatically trigger a build or deployment pipeline.
+## 2. Continuous Deployment (CD)
+Automate Kubernetes Deployment: Your project uses Kubernetes manifests stored in the k8s-manifests directory. Jenkins can be configured to:
+- Build and package updated images (e.g., WordPress and MySQL containers).
+- Deploy the changes to your Kubernetes cluster (using kubectl or a tool like ArgoCD).
+- Docker Image Builds: If you're building custom Docker images, Jenkins can automate the docker build and docker push process to push updated images to a container registry (like Docker Hub or AWS ECR).
