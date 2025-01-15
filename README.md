@@ -466,5 +466,21 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 - solved 
 ![image](https://github.com/user-attachments/assets/9f688ed5-4e2d-4152-bacf-2435563dcc4a)
 
+## Login ArgoCD username : admin | password : encrypted by kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d
+![image](https://github.com/user-attachments/assets/91b4fb22-d1c6-4d7b-b65e-c9045c434fa1)
 
+# This is The FrontEnd Application Form 
+## Create Application 
+![image](https://github.com/user-attachments/assets/66333290-c3d5-46fb-b6f3-836f4da409da)
 
+## Application Form Part 1 
+![image](https://github.com/user-attachments/assets/173a750c-d21d-41ac-86fb-8821596401a1)
+
+## Application Form Part 2
+![image](https://github.com/user-attachments/assets/c23f6dfe-bb6c-425c-b4ad-846bae08093c)
+
+## Application Form Part 3 Click in Create 
+![image](https://github.com/user-attachments/assets/781aa940-28ac-4e16-bd2e-705987227c1c)
+![image](https://github.com/user-attachments/assets/6a5d6b8e-c2b5-467d-8532-e3ebfb312af8)
+
+# This is The Backend Application Form 
