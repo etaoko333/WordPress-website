@@ -5,7 +5,7 @@ metadata:
   namespace: wordpress-namespace
 spec:
   serviceName: "mysql"
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: mysql
