@@ -402,7 +402,7 @@ Deploy ArgoCD in your Kubernetes cluster using the following command:
 ```bash
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-kubectl get pods -n argocd
+watch kubectl get pods -n argocd
 ```
 ### **2 Install ArgoCD CLI**
 - Official Website Reference 
@@ -411,8 +411,9 @@ https://kostis-argo-cd.readthedocs.io/en/refresh-docs/getting_started/install_cl
 ```
 - Direct Commands
 ```bash
-curl --silent --location -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/v2.4.7/argocd-linux-amd64
-chmod +x /usr/local/bin/argocd
+sudo curl --silent --location -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/v2.4.7/argocd-linux-amd64
+sudo chmod +x /usr/local/bin/argocd
+uname -m
 argocd version
 ```
 ### Verify the NodePort Service
