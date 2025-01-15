@@ -495,8 +495,10 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 ![image](https://github.com/user-attachments/assets/f2e28910-8cf3-474c-9c64-dca07b9a24e2)
 
 # Jenkins Installing Step's
-- Jenkins is an open-source automation server widely used for continuous integration (CI) and continuous delivery (CD). It automates repetitive tasks involved in the software development lifecycle, such as building, testing, and deploying applications. Jenkins is highly extensible and supports numerous plugins for integrating with various tools, repositories, and environments.
+![image](https://github.com/user-attachments/assets/b1ea58a0-725d-4c8c-804a-1fe2d5844f53)
 
+- Jenkins is an open-source automation server widely used for continuous integration (CI) and continuous delivery (CD). It automates repetitive tasks involved in the software development lifecycle, such as building, testing, and deploying applications. Jenkins is highly extensible and supports numerous plugins for integrating with various tools, repositories, and environments.
+## Official Website : https://www.jenkins.io/
 ## Why Use Jenkins in Your WordPress Project? 
 - For your WordPress project hosted on GitHub, Jenkins can play a vital role in automating the build, test, and deployment workflows. Here's how Jenkins can be used in your project
 ## 1. Continuous Integration (CI)
