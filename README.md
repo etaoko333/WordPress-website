@@ -509,7 +509,6 @@ Automate Kubernetes Deployment: Your project uses Kubernetes manifests stored in
 - Build and package updated images (e.g., WordPress and MySQL containers).
 - Deploy the changes to your Kubernetes cluster (using kubectl or a tool like ArgoCD).
 - Docker Image Builds: If you're building custom Docker images, Jenkins can automate the docker build and docker push process to push updated images to a container registry (like Docker Hub or AWS ECR).
-# Installing Commands 
 # Jenkins Prerequisites
 
 ## Minimum Hardware Requirements
@@ -525,4 +524,30 @@ Automate Kubernetes Deployment: Your project uses Kubernetes manifests stored in
 - Ensure sufficient CPU resources, especially if multiple pipelines or plugins are in use.
 - If running Jenkins in a virtualized or containerized environment, allocate appropriate resources to avoid performance bottlenecks.
 - For larger teams or complex pipelines, consider scaling resources further based on workload.
+
+# Installing Commands 
+
+## 1 Update System 
+```bash
+sudo apt-get update 
+```
+## 2 Install Java 
+```bash
+sudo apt install fontconfig openjdk-17-jre
+java -version
+```
+## Jenkins Long Term Support release
+```bash
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+```
+```bash
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+```
+```bash
+sudo apt-get update
+sudo apt-get install jenkins
+```
 
