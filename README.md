@@ -225,9 +225,18 @@ nodes:
   image: kindest/node:v1.31.2
 
 ```
--  cd kind-cluster/ 
+-  cd kind-cluster/
+-  create cluster 
 ```yaml
  kind create cluster --name=wordpress-namespace --config=config.yml
+```
+- Get cluster
+```bash
+kind get clusters
+```
+-- Delete Cluster
+```bash
+kind delete cluster --name <CLUSTER_NAME>
 ```
 ##  23 Verify the cluster:
 ```bash
