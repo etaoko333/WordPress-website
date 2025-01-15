@@ -494,7 +494,7 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 ![image](https://github.com/user-attachments/assets/3f749a1d-0e79-4977-992f-edc5abc9769a)
 ![image](https://github.com/user-attachments/assets/f2e28910-8cf3-474c-9c64-dca07b9a24e2)
 
-# Jenkins Installing Step's
+# Jenkins
 ![image](https://github.com/user-attachments/assets/b1ea58a0-725d-4c8c-804a-1fe2d5844f53)
 
 - Jenkins is an open-source automation server widely used for continuous integration (CI) and continuous delivery (CD). It automates repetitive tasks involved in the software development lifecycle, such as building, testing, and deploying applications. Jenkins is highly extensible and supports numerous plugins for integrating with various tools, repositories, and environments.
@@ -509,3 +509,4 @@ Automate Kubernetes Deployment: Your project uses Kubernetes manifests stored in
 - Build and package updated images (e.g., WordPress and MySQL containers).
 - Deploy the changes to your Kubernetes cluster (using kubectl or a tool like ArgoCD).
 - Docker Image Builds: If you're building custom Docker images, Jenkins can automate the docker build and docker push process to push updated images to a container registry (like Docker Hub or AWS ECR).
+# Installing Commands 
