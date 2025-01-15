@@ -6,7 +6,7 @@ metadata:
   labels:
     app: wordpress
 spec:
-  replicas: 1  # One replica of WordPress pod
+  replicas: 2  # One replica of WordPress pod
   selector:
     matchLabels:
       app: wordpress
