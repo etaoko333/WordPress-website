@@ -425,25 +425,38 @@ sudo chmod +x /usr/local/bin/argocd
 uname -m
 argocd version
 ```
+![image](https://github.com/user-attachments/assets/c14764c2-3844-4b1f-96ef-73f4a2f60d73)
+
 ### Verify the NodePort Service
 ```bash
 kubectl get pods -n argocd
 ```
+![image](https://github.com/user-attachments/assets/8e2ff0ac-9ffa-4079-a771-de0d96eb94f7)
+
 ### Change ArgoCD Server Service Type to NodePort
-```bash
-kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
-```
 - Verify the NodePort Service
 ```bash
 kubectl get svc -n argocd
 ```
+![image](https://github.com/user-attachments/assets/2c52489a-9957-4e1f-b837-44430988102e)
+
+```bash
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
+```
+![image](https://github.com/user-attachments/assets/59fa4503-91fc-4811-8831-2d8611b6f50c)
+
 ### Port Forwarding Command 
 ```bash
 kubectl port-forward service/argocd-server -n argocd 8100:443 &
 ```
+![image](https://github.com/user-attachments/assets/e9bc112b-5982-4420-8435-00a56aec9f94)
+![image](https://github.com/user-attachments/assets/610b88c9-3d1f-429b-837d-7e784eaccedb)
+
 ## Login to ArgoCD Using CLI
 - username : admin
 - password
 ```bash
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d
 ```
+![image](https://github.com/user-attachments/assets/6d2bd82c-bec8-4531-ac0f-dc31ecc255a0)
+
