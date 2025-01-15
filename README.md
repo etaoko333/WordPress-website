@@ -510,3 +510,19 @@ Automate Kubernetes Deployment: Your project uses Kubernetes manifests stored in
 - Deploy the changes to your Kubernetes cluster (using kubectl or a tool like ArgoCD).
 - Docker Image Builds: If you're building custom Docker images, Jenkins can automate the docker build and docker push process to push updated images to a container registry (like Docker Hub or AWS ECR).
 # Installing Commands 
+# Jenkins Prerequisites
+
+## Minimum Hardware Requirements
+- **RAM**: 256 MB
+- **Drive Space**: 1 GB  
+  *(10 GB is a recommended minimum if running Jenkins as a Docker container)*
+
+## Recommended Hardware Configuration (for a small team)
+- **RAM**: 4 GB+
+- **Drive Space**: 50 GB+
+
+## Additional Notes
+- Ensure sufficient CPU resources, especially if multiple pipelines or plugins are in use.
+- If running Jenkins in a virtualized or containerized environment, allocate appropriate resources to avoid performance bottlenecks.
+- For larger teams or complex pipelines, consider scaling resources further based on workload.
+
