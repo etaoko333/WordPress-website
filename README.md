@@ -460,3 +460,9 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 ```
 ![image](https://github.com/user-attachments/assets/6d2bd82c-bec8-4531-ac0f-dc31ecc255a0)
 
+### Port Forwading issue debugging 
+- error
+![image](https://github.com/user-attachments/assets/a7772c8b-53af-462b-a2f0-3c0ee5a3f72a)
+- solved 
+![image](https://github.com/user-attachments/assets/d1f0ec32-50cd-4aa2-982f-a9bf2074e9cd)
+
