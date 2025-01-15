@@ -494,3 +494,4 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 ![image](https://github.com/user-attachments/assets/3f749a1d-0e79-4977-992f-edc5abc9769a)
 ![image](https://github.com/user-attachments/assets/f2e28910-8cf3-474c-9c64-dca07b9a24e2)
 
+# Jenkins Installing Step's
