@@ -1,4 +1,4 @@
-![1](https://github.com/user-attachments/assets/402e161f-c40f-4f48-99cb-20f082bbae94)
+![image](https://github.com/user-attachments/assets/cb14c18c-7442-4be2-83ea-8d7f10f8ff5e)![1](https://github.com/user-attachments/assets/402e161f-c40f-4f48-99cb-20f082bbae94)
 
 # WordPress and MySQL Docker Setup
 
@@ -427,4 +427,14 @@ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
 - Verify the NodePort Service
 ```bash
 kubectl get svc -n argocd
+```
+### Port Forwarding Command 
+```bash
+kubectl port-forward service/argocd-server -n argocd 8100:443 &
+```
+### **Login to ArgoCD Using CLI*
+- username : admin
+- password
+```bash
+kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d
 ```
