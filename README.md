@@ -112,6 +112,8 @@ docker images
 ### If you have previously deployed any application through Docker, the Docker images remain stored. To remove them, use this command.
 ```bash
 docker image prune -a -f
+docker stop container id
+docker rm container id 
 ```
 ### 13 This guide walks you through building, tagging, pushing, and running WordPress and MySQL containers using Docker.
 ```bash
