@@ -274,7 +274,7 @@ kubectl get namespaces
 ```
 #### 2 MySQL Resources Create Persistent Volume.
 ```yaml
-kubectl apply -f mysql-pv.yaml
+kubectl apply -f mysql/mysql-pv.yml
 ```
 #### Verify Persistent Volume.
 ```yaml
@@ -282,7 +282,7 @@ kubectl get pv
 ```
 #### 3 MySQL Resources Create Persistent Volume Claim.
 ```yaml
-kubectl apply -f mysql-pvc.yaml
+ kubectl apply -f mysql/mysql-pvc.yml
 ```
 #### Verify Persistent Volume.
 ```yaml
@@ -295,61 +295,55 @@ kubectl describe pvc my-claim -n wordpress-namespace
 ```
 #### 4 Secrets (e.g., database username/password) .
 ```yaml
-kubectl apply -f mysql/mysql-secret.yaml
+ kubectl apply -f mysql/mysql-secret.yml
 ```
 #### 5 Configuration values (e.g., database settings) .
 ```yaml
-kubectl apply -f mysql/mysql-configmap.yaml
+ kubectl apply -f mysql/mysql-configmap.yml
 ```
 #### 6 MySQL deployment .
 ```yaml
-kubectl apply -f mysql/mysql-deployment.yaml
+kubectl apply -f mysql/mysql-statefulset.yml
 ```
 #### 7 MySQL service expose .
 ```yaml
-kubectl apply -f mysql/mysql-service.yaml
+kubectl apply -f mysql/mysql-service.yml
 ```
 ## WordPress Resources
 #### 8 Persistent Volume create .
 ```yaml
-kubectl apply -f wordpress/wordpress-pv.yaml
+kubectl apply -f wordpress/wordpress-pv.yml
 ```
 
 #### 9 Persistent Volume Claim .
 ```yaml
-kubectl apply -f wordpress/wordpress-pvc.yaml
+kubectl apply -f wordpress/wordpress-pvc.yml
 ```
-
-#### 10 WordPress-specific environment variables .
-```yaml
-kubectl apply -f wordpress/wordpress-pv.yaml
-```
-
 #### 11 Persistent Volume create .
 ```yaml
-kubectl apply -f wordpress/wordpress-configmap.yaml
+kubectl apply -f wordpress/wordpress-configmap.yml
 ```
 
 #### 12 WordPress deployment create .
 ```yaml
-kubectl apply -f wordpress/wordpress-deployment.yaml
+kubectl apply -f wordpress/wordpress-deployment.yml
 ```
 
 #### 13 WordPress service expose .
 ```yaml
-kubectl apply -f wordpress/wordpress-service.yaml
+ kubectl apply -f wordpress/wordpress-service.yml
 ```
 #### 14 Autoscaling configure .
 ```yaml
-kubectl apply -f wordpress/wordpress-hpa.yaml
+ kubectl apply -f wordpress/wordpress-hpa.yml
 ```
 #### 15 External traffic route .
 ```yaml
-kubectl apply -f wordpress/wordpress-ingress.yaml
+ kubectl apply -f wordpress/wordpress-ingress.yml
 ```
 #### 15 Port Forwading for MySql Local System  .
 ```yaml
-kubectl port-forward svc/mysql-svc 3306:3306 -n wordpress-namespace
+kubectl port-forward svc/mysql 3306:3306 -n wordpress-namespace &
 ```
 #### 16 Port Forwading for MySql AWS  .
 ```yaml
@@ -357,7 +351,7 @@ kubectl port-forward svc/mysql-svc 3306:3306 -n wordpress-namespace --address="0
 ```
 #### 17 Port Forwading for WordPress Local System  .
 ```yaml
-kubectl port-forward svc/wordpress-svc 8080:80 -n wordpress-namespace
+kubectl port-forward svc/wordpress 8080:80 -n wordpress-namespace &
 ```
 
 #### 17 Port Forwading for WordPress AWS  .
@@ -378,7 +372,8 @@ php_value max_execution_time 300
 ```
 ## check all services running on single command 
 ```yaml
-Kubectl get all -n wordpress-namespace 
+ kubectl get all -n wordpress-namespace
+ kubectl get svc -n wordpress-namespace
 ```
 #
 
