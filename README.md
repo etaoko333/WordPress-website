@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/cb14c18c-7442-4be2-83ea-8d7f10f8ff5e)![1](https://github.com/user-attachments/assets/402e161f-c40f-4f48-99cb-20f082bbae94)
+![1](https://github.com/user-attachments/assets/402e161f-c40f-4f48-99cb-20f082bbae94)
 
 # WordPress and MySQL Docker Setup
 
