@@ -592,3 +592,10 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 
 ![image](https://github.com/user-attachments/assets/846bd9f2-b9cb-4f5e-81d8-028aca327ffc)
 
+![image](https://github.com/user-attachments/assets/db407eb3-00fd-4116-89fd-fcadf2739048)
+
+# Setup Jenkins Email Notification
+## Step 1 Gmail Settings 
+![image](https://github.com/user-attachments/assets/138361d1-d5ad-41dc-8d06-98f09ab04dd1)
+- Click on Security on two step verification 
+- ![image](https://github.com/user-attachments/assets/b8215da8-6fa1-43ef-9d80-fa785bc803c1)
