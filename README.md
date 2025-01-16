@@ -360,12 +360,12 @@ kubectl port-forward svc/mysql-svc 3306:3306 -n wordpress-namespace --address="0
 ```
 #### 17 Port Forwading for WordPress Local System  .
 ```yaml
-kubectl port-forward svc/wordpress 8080:80 -n wordpress-namespace &
+kubectl port-forward svc/wordpress 8180:80 -n wordpress-namespace &
 ```
 
 #### 17 Port Forwading for WordPress AWS  .
 ```yaml
-kubectl port-forward svc/wordpress-svc 8080:80 -n wordpress-namespace --address="0.0.0.0/0"
+kubectl port-forward svc/wordpress-svc 8180:80 -n wordpress-namespace --address="0.0.0.0/0"
 ```
 ## Troubleshooting
 
