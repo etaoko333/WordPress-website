@@ -627,8 +627,9 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 - Docker
 - Pipeline: Stage View
 
-## OWASP Dependency-Check 
-![image](https://github.com/user-attachments/assets/3afd10f1-ba55-42fc-98c4-0f5460d028ce)
+## Dependency-Check 
+![image](https://github.com/user-attachments/assets/031d9579-0682-43db-9f84-af5abfe6a545)
+
 
 ## OWASP Dependency-Check 
 ![image](https://github.com/user-attachments/assets/35ddfc8c-63e0-4af1-bb71-1727fa4bfed7)
