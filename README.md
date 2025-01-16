@@ -652,6 +652,18 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 ## Two Credentials added on jenkins 
 ![image](https://github.com/user-attachments/assets/653382ce-9436-428a-abba-25b136a98455)
 
-## Add SonarOube Server in Jenkins 
+## Add SonarOube Server on Jenkins 
 ![image](https://github.com/user-attachments/assets/8b5624d9-410e-432a-9554-4f01230d04ea)
 
+## Add GitHub on Jenkins 
+- Settings > Developer Settings > New personal access token (classic) | Click on Generat Tokens 
+![image](https://github.com/user-attachments/assets/33ee2dc2-81ee-457a-a495-4c9795fe09a7)
+![image](https://github.com/user-attachments/assets/818c3ccd-48f6-4b1b-943f-8429f12f16bb)
+
+## Add SonarQube Installations 
+![image](https://github.com/user-attachments/assets/e2bcb3be-0eaa-406e-a0bd-ea482945d2bd)
+
+## WebHook For SonarQube 
+- Whenever Jenkins hit on SonarQube they need WebHooks
+- Sonar > Configuration > WebHooks SonarQube does not allow the use of localhost in webhook URLs because these addresses are inaccessible to other services outside the server itself. However, since your goal is to test the webhook on your local system,
+![image](https://github.com/user-attachments/assets/09b7d6f3-13c7-4cbb-8653-b30a8d60476f)
