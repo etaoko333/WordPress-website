@@ -646,3 +646,12 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 ## Create Jenkins Token for Access SonarQube in Jenkins Generat Token 
 ![image](https://github.com/user-attachments/assets/e703350b-c1bd-49f3-8a8a-d289a0fa77af)
 
+## Sonar Add credentials
+![image](https://github.com/user-attachments/assets/2760c609-df75-48a7-8bef-d7bfb89767cc)
+
+## Two Credentials added on jenkins 
+![image](https://github.com/user-attachments/assets/653382ce-9436-428a-abba-25b136a98455)
+
+## Add SonarOube Server in Jenkins 
+![image](https://github.com/user-attachments/assets/8b5624d9-410e-432a-9554-4f01230d04ea)
+
