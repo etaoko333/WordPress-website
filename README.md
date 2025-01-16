@@ -609,4 +609,17 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 ![image](https://github.com/user-attachments/assets/11bb93b4-03c4-4893-ab0e-8c3ec47d6d2f)
 ## Add credentials
 ![image](https://github.com/user-attachments/assets/c3cf92c3-ea30-46de-be34-e4514a078ca5)
+- Result ![image](https://github.com/user-attachments/assets/9e4dc4d6-ac35-4ac7-92ab-895cfde93968)
+## Manager Jenkins 
+![image](https://github.com/user-attachments/assets/47cd0230-f4ee-40cd-98bd-567648c96ed8)
+## Configure Extended E-mail Notification
+![image](https://github.com/user-attachments/assets/88c5ccb5-41f8-4a9f-9c54-e820ab984436)
+## Advance 
+![image](https://github.com/user-attachments/assets/83ef20cc-9d7a-4892-bb39-8034b2ab1c9c)
+## Test Check Email Option Working or not 
+![image](https://github.com/user-attachments/assets/568e0a0d-04a3-4c95-802f-af1d7dd49d69)
+
+
+
+
 
