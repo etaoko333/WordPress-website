@@ -636,3 +636,8 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 
 ## Docker Install 
 ![image](https://github.com/user-attachments/assets/bf4bce7b-2bfe-4610-8a20-196a14bb6235)
+
+## Dependency-Check installations
+![image](https://github.com/user-attachments/assets/d5320be9-1eaa-44e2-825c-d8ff68fdc61e)
+
+
