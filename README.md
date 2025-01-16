@@ -618,6 +618,7 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 ![image](https://github.com/user-attachments/assets/83ef20cc-9d7a-4892-bb39-8034b2ab1c9c)
 ## Test Check Email Option Working or not 
 ![image](https://github.com/user-attachments/assets/568e0a0d-04a3-4c95-802f-af1d7dd49d69)
+![image](https://github.com/user-attachments/assets/d9233f4b-3acc-45d4-bdae-8bfdf0aa88b7)
 
 
 
