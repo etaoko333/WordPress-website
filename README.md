@@ -584,3 +584,11 @@ echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main |
 sudo apt-get update -y
 sudo apt-get install trivy -y
 ```
+## Install and configure SonarQube (Master machine) Add Ports If You are Working on AWS 
+```bash
+docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
+```
+![image](https://github.com/user-attachments/assets/f29bc0ac-0d0a-40cb-96f2-5e5871e14faf)
+
+![image](https://github.com/user-attachments/assets/846bd9f2-b9cb-4f5e-81d8-028aca327ffc)
+
