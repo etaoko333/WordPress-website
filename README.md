@@ -599,3 +599,9 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 ![image](https://github.com/user-attachments/assets/138361d1-d5ad-41dc-8d06-98f09ab04dd1)
 - Click on Security on two step verification 
 - ![image](https://github.com/user-attachments/assets/b8215da8-6fa1-43ef-9d80-fa785bc803c1)
+- ![image](https://github.com/user-attachments/assets/e3a2bc73-fcdb-46bc-9775-697bad934505)
+- Search APP Password
+- ![image](https://github.com/user-attachments/assets/bc963737-aac1-42ec-855a-45cac4f94711)
+
+## Configure credentials
+![image](https://github.com/user-attachments/assets/acb8f0d0-9157-4b85-a573-9e41c438c145)
