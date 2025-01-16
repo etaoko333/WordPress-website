@@ -620,7 +620,11 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 ![image](https://github.com/user-attachments/assets/568e0a0d-04a3-4c95-802f-af1d7dd49d69)
 ![image](https://github.com/user-attachments/assets/d9233f4b-3acc-45d4-bdae-8bfdf0aa88b7)
 
-
-
+# Setup OWASP ..!
+## Go to Jenkins Master and click on Manage Jenkins --> Plugins --> Available plugins install the below plugins:
+- OWASP
+- SonarQube Scanner
+- Docker
+- Pipeline: Stage View
 
 
