@@ -563,3 +563,15 @@ http://<your-server-ip>:8080
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
+![image](https://github.com/user-attachments/assets/5c7690cc-262b-4150-a3fb-396ce2c736ce)
+![image](https://github.com/user-attachments/assets/ee5e312d-d3ef-43f4-948e-65f50fc83e36)
+## Install Suggested Plugins
+![image](https://github.com/user-attachments/assets/2732bc42-f1a5-487e-ab59-2f5ad1e79f7e)
+
+## Create First Admin User
+![image](https://github.com/user-attachments/assets/d0472be2-7853-4373-a19c-b2982dfef760)
+## Login URL 
+```bash
+http://localhost:8080/
+```
+![image](https://github.com/user-attachments/assets/fda288f0-4639-4918-9e51-4ac1dd949087)
