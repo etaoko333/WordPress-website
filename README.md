@@ -640,4 +640,6 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 ## Dependency-Check installations
 ![image](https://github.com/user-attachments/assets/d5320be9-1eaa-44e2-825c-d8ff68fdc61e)
 
+## Jenkins & SonarQube | Administration > Users
+![image](https://github.com/user-attachments/assets/a464f913-c265-4746-b965-caf4bcecc290)
 
