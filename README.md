@@ -605,3 +605,8 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 
 ## Configure credentials
 ![image](https://github.com/user-attachments/assets/acb8f0d0-9157-4b85-a573-9e41c438c145)
+## Click on 
+![image](https://github.com/user-attachments/assets/11bb93b4-03c4-4893-ab0e-8c3ec47d6d2f)
+## Add credentials
+![image](https://github.com/user-attachments/assets/c3cf92c3-ea30-46de-be34-e4514a078ca5)
+
