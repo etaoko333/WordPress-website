@@ -676,4 +676,6 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 ![image](https://github.com/user-attachments/assets/1ddc7bda-5d98-4ebb-9109-7615b97adbe0)
 - Save 
 
+## Groovy Scripts already added on github : https://github.com/Burhan1009/Jenkins_Automate_libraries.git
+![image](https://github.com/user-attachments/assets/5e245b02-fb2f-4d6e-be53-f09caa381dd8)
 
