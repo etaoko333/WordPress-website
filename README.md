@@ -687,3 +687,10 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 
 - All Credentials
 - ![Screenshot from 2025-01-19 19-28-58](https://github.com/user-attachments/assets/ea36d19c-635d-48fa-b786-db0d3993d773)
+
+## Jenkins CI Configuration 
+- This is the CI pipeline for WordPress 
+![Screenshot from 2025-01-19 19-48-15](https://github.com/user-attachments/assets/8709d364-410c-4e39-850d-468c0c415b1a)
+- Configuration General
+![Screenshot from 2025-01-19 19-49-20](https://github.com/user-attachments/assets/52d31322-5297-4612-b234-802bf29dd867)
+
