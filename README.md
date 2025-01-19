@@ -682,3 +682,6 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 ## Add Docker Credentials for Push a Docker Image
 ![image](https://github.com/user-attachments/assets/01624d0f-30e7-439f-b12e-755d28afccc3)
 
+- Docker Credentials add on Jenkins
+![Screenshot from 2025-01-19 19-26-27](https://github.com/user-attachments/assets/f1f85c44-0dab-40e2-99d1-cc7ecddf532a)
+
