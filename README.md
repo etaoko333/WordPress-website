@@ -694,3 +694,10 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 - Configuration General
 ![Screenshot from 2025-01-19 19-49-20](https://github.com/user-attachments/assets/52d31322-5297-4612-b234-802bf29dd867)
 
+- Add GitHub credentials
+![image](https://github.com/user-attachments/assets/9627998d-dd3f-4625-945f-8b4eae525e2e)
+
+- Pipeline script
+![image](https://github.com/user-attachments/assets/469eaf4f-7c90-4bc6-bca8-4cb8e8739e89)
+
+
