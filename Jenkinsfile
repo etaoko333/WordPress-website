@@ -69,39 +69,17 @@ pipeline {
             }
         }
         
-        stage('Exporting environment variables') {
-            parallel{
-                stage("Backend env setup"){
-                    steps {
-                        script{
-                            dir("Automations"){
-                                sh "bash updatebackendnew.sh"
-                            }
-                        }
-                    }
-                }
-                
-                stage("Frontend env setup"){
-                    steps {
-                        script{
-                            dir("Automations"){
-                                sh "bash updatefrontendnew.sh"
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        
         
         stage("Docker: Build Images"){
             steps{
                 script{
                         dir('backend'){
-                            docker_build("wordpress-backend-beta","${params.BACKEND_DOCKER_TAG}","burhan503")
+                            docker_build("burhan503/burhan503-mysql","${params.BACKEND_DOCKER_TAG}","burhan503")
                         }
                     
                         dir('frontend'){
-                            docker_build("wordpress-frontend-beta","${params.FRONTEND_DOCKER_TAG}","burhan503")
+                            docker_build("burhan503/burhan503-wordpress","${params.FRONTEND_DOCKER_TAG}","burhan503")
                         }
                 }
             }
@@ -110,8 +88,8 @@ pipeline {
         stage("Docker: Push to DockerHub"){
             steps{
                 script{
-                    docker_push("wordpress-backend-beta","${params.BACKEND_DOCKER_TAG}","burhan503") 
-                    docker_push("wordpress-frontend-beta","${params.FRONTEND_DOCKER_TAG}","burhan503")
+                    docker_push("burhan503/burhan503-mysql","${params.BACKEND_DOCKER_TAG}","burhan503") 
+                    docker_push("burhan503/burhan503-wordpress","${params.FRONTEND_DOCKER_TAG}","burhan503")
                 }
             }
         }
