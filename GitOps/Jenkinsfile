@@ -49,13 +49,13 @@ pipeline {
                 script{
                     dir('k8s-manifests/mysql'){
                         sh """
-                            sed -i -e s/wordpress-backend-beta.*/wordpress-backend-beta:${params.BACKEND_DOCKER_TAG}/g mysql-statefulset.yml
+                            sed -i -e s/burhan503/burhan503-mysql.*/burhan503/burhan503-mysql:${params.BACKEND_DOCKER_TAG}/g mysql-statefulset.yml
                         """
                     }
                     
                     dir('k8s-manifests/wordpress'){
                         sh """
-                            sed -i -e s/wordpress-frontend-beta.*/wordpress-frontend-beta:${params.FRONTEND_DOCKER_TAG}/g wordpress-deployment.yml
+                            sed -i -e s/burhan503/burhan503-wordpress.*/burhan503/burhan503-wordpress:${params.FRONTEND_DOCKER_TAG}/g wordpress-deployment.yml
                         """
                     }
                     
