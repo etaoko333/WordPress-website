@@ -1,4 +1,4 @@
-@Library('Jenkins_Automate_libraries') _
+@Library('Shared-Libraries') _
 pipeline {
     agent {label 'Node'}
     
