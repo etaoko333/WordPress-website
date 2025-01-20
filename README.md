@@ -700,4 +700,6 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 - Pipeline script
 ![image](https://github.com/user-attachments/assets/469eaf4f-7c90-4bc6-bca8-4cb8e8739e89)
 
+## WordPress CD Pipeline :- https://shorturl.at/HuEsb
+![image](https://github.com/user-attachments/assets/61d96a42-4bd2-495d-a375-41d52ef464c9)
 
