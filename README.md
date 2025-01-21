@@ -594,6 +594,22 @@ docker run -itd --name SonarQube-Server -p 9000:9000 sonarqube:lts-community
 
 ![image](https://github.com/user-attachments/assets/db407eb3-00fd-4116-89fd-fcadf2739048)
 
+## Sonar Container Error : When sonar server not running use this commands 
+```bash
+docker ps -a
+```
+```bash
+➜  Desktop docker ps -a                                                                                            
+
+CONTAINER ID   IMAGE                     COMMAND                  CREATED      STATUS                                PORTS                                       NAMES
+c4a77427a48f   sonarqube:lts-community   "/opt/sonarqube/dock…"   2 days ago   Exited (255) Less than a second ago   0.0.0.0:9000->9000/tcp, :::9000->9000/tcp   SonarQube-Server
+bb30fc7c7dac   kindest/node:v1.31.2      "/usr/local/bin/entr…"   4 days ago   Up Less than a second                                                             wordpress-namespace-worker
+29e7e514fd2b   kindest/node:v1.31.2      "/usr/local/bin/entr…"   4 days ago   Up Less than a second                                                             wordpress-namespace-worker2
+35952a83e257   kindest/node:v1.31.2      "/usr/local/bin/entr…"   4 days ago   Up Less than a second                 127.0.0.1:42253->6443/tcp                   wordpress-namespace-control-plane
+➜  Desktop docker start c4a77427a48f
+
+```
+
 # Setup Jenkins Email Notification
 ## Step 1 Gmail Settings 
 ![image](https://github.com/user-attachments/assets/138361d1-d5ad-41dc-8d06-98f09ab04dd1)
