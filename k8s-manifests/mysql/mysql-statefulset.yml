@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: bholly333/holly333-mysql:latest
+        image: sholly333/sholly333-mysql:latest
         ports:
         - containerPort: 3306
         envFrom:
