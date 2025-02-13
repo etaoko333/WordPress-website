@@ -7,11 +7,10 @@ metadata:
     app: wordpress
 spec:
   selector:
-    app: wordpress  # Service ko WordPress ke pods ko select karne ke liye label match karna hoga
+    app: wordpress  # The service needs to match the label to select the WordPress pods
   ports:
     - protocol: TCP
-      port: 80  # Service ko cluster ke andar port 80 par expose karna
-      targetPort: 80  # Container ka port jahan WordPress running hai
-      nodePort: 30080  # Node ke external port jahan WordPress accessible hoga
-  type: NodePort  # Service ko external access dene ke liye NodePort type
-
+      port: 80  # Exposing the service on port 80 within the cluster
+      targetPort: 80  # he port on the container where WordPress is running
+      nodePort: 30080  # The external port on the node where WordPress will be accessible
+  type: NodePort  # Using NodePort type to provide external access to the service

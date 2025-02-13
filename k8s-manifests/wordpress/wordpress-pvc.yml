@@ -7,11 +7,10 @@ metadata:
     app: wordpress
 spec:
   accessModes:
-    - ReadWriteOnce  # WordPress ko ek pod ke liye read-write access
+    - ReadWriteOnce  # Read-write access for WordPress for one pod
   resources:
     requests:
       storage: 2Gi  # Storage size requested for WordPress
   volumeMode: Filesystem
-  storageClassName: manual  # Must match with PV storage class
+  storageClassName: manual  # Must match the PV storage class
   volumeName: wordpress-pv  # Link the PVC to the specific PV
-

@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   mysql:
-    image: burhan503/burhan503-mysql:latest
+    image: sholly333/sholly333-mysql:latest
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
@@ -15,7 +15,7 @@ services:
       - mysql_data:/var/lib/mysql
 
   wordpress:
-    image: burhan503/burhan503-wordpress:latest
+    image: holly333/holly333-wordpress:latest
     container_name: wordpress
     ports:
       - "8100:80"
